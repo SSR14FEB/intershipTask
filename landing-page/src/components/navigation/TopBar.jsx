@@ -21,7 +21,7 @@ function TopBar({ productMenu, utilityMenu }) {
         {utilityMenu.map((item) => (
           <li
             key={item.name}
-            className="list-none border border-gray-300 p-2 pr-8 pl-8 hover:font-bold"
+            className="list-none border-r border-l border-gray-300 p-2 pr-8 pl-8 hover:font-bold"
           >
             <a href={item.link}>{item.name}</a>
           </li>

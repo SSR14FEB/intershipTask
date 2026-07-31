@@ -15,7 +15,7 @@ function Menu({ menu, logo }) {
           <nav className="mt-3 flex h-full items-center gap-18 pl-8 text-sm">
             {activeMenu.map((item, index) => (
               <li
-                key={item.name}
+                key={item.index}
                 className="flex list-none items-end gap-1 font-light hover:font-bold"
                 onMouseEnter={() => setActiveSubMenuIndex(index)}
               >

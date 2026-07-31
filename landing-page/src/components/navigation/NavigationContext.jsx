@@ -1,4 +1,5 @@
 import { createContext, useContext } from "react";
+const NavigationContext = createContext();
 export function useNavigationContext() {
   const context = useContext(NavigationContext);
   if (!context) {
