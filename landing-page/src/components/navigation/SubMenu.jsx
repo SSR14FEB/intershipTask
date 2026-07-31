@@ -1,21 +1,11 @@
 import { useNavigationContext } from "./NavigationContext";
-function SubMenu({ electricalSystem, vanConversion, shop }) {
+function SubMenu({ subMenu }) {
   const { setActiveSubMenuIndex, activeSubMenuIndex, activeTabIndex } = useNavigationContext();
-  let activeSubMenu = null;
-  if (activeTabIndex === 0) {
-    activeSubMenu = electricalSystem[activeSubMenuIndex];
-  }
-  if (activeTabIndex === 1) {
-    activeSubMenu = vanConversion[activeSubMenuIndex];
-    console.log(activeSubMenuIndex, "activeSubMenuIndex");
-  }
-  if (activeTabIndex === 2) {
-    activeSubMenu = shop[activeSubMenuIndex];
-  }
+  const menu = subMenu[activeTabIndex];
+  const activeSubMenu = menu[activeSubMenuIndex];
   if (!activeSubMenu) {
     return null;
   }
-  console.log("activeSubMenu", activeSubMenu);
   return (
     <div
       className="flex h-68 w-screen items-center gap-10 bg-white"

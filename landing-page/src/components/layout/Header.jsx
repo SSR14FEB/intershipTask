@@ -1,5 +1,5 @@
 import Navigation from "../navigation/Navigation";
-import { productMenu, utilityMenu, menu, electricalSystem, vanConversion, shop } from "../data/navigationData"
+import { productMenu, utilityMenu, menu, subMenuData } from "../data/navigationData"
 function Header() {
   return (
     <header className="flex h-full w-screen flex-col items-center justify-between bg-gray-200 pb-1">
@@ -14,9 +14,7 @@ function Header() {
           logo={"src/assets/Nohma_logo_split_1-2-59_e3z182.png"}
         />
         <Navigation.subMenu
-          electricalSystem={electricalSystem}
-          vanConversion={vanConversion}
-          shop={shop}
+          subMenu={subMenuData}
         />
       </Navigation>
     </header>

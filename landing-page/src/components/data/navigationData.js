@@ -36,7 +36,7 @@ export const menu = [
   ],
 ];
 
-export const electricalSystem = [
+const electricalSystem = [
   {
     name: "Electrical system",
     columns: [
@@ -174,7 +174,7 @@ export const electricalSystem = [
   },
 ];
 
-export const vanConversion = [
+const vanConversion = [
   {
     name: "The Van Conversion Bible",
     columns: [
@@ -346,7 +346,7 @@ export const vanConversion = [
   },
 ];
 
-export const shop = [
+const shop = [
   {
     name: "Books",
     columns: [
@@ -619,3 +619,5 @@ export const shop = [
     ],
   },
 ];
+
+export const subMenuData = [electricalSystem, vanConversion, shop];
