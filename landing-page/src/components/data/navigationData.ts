@@ -1,24 +1,30 @@
-export interface MenuItems {
+export interface TopBar {
   name: string;
   link: string;
-  pro: boolean;
-  new: boolean;
+  pro?: boolean;
+  new?: boolean;
 }
-interface electricalSystem {}
 
-export const productMenu: MenuItems[][] = [
+export const productMenu: TopBar[] = [
   { name: "Electrical system", link: "#" },
   { name: "Van conversion", link: "#" },
   { name: "Shop", link: "#" },
 ];
 
-export const utilityMenu: MenuItems[][] = [
+export const utilityMenu: TopBar[] = [
   { name: "ABOUT US", link: "#" },
   { name: "Shop", link: "#" },
   { name: "Testimonial", link: "#" },
   { name: "🇮🇳", link: "#" },
   { name: "₹", link: "#" },
 ];
+
+export interface MenuItems {
+  name: string;
+  link: string;
+  pro?: boolean;
+  new?: boolean;
+}
 
 export const menu: MenuItems[][] = [
   [
@@ -642,5 +648,4 @@ const shop = [
   },
 ];
 
-
-export const subMenuData:SubMenuInterface[][] = [electricalSystem, vanConversion, shop];
+export const subMenuData: SubMenuInterface[][] = [electricalSystem, vanConversion, shop];

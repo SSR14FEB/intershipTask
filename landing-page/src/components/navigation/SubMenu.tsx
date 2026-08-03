@@ -28,8 +28,8 @@ function SubMenu({ subMenu }: SubMenuProps) {
                 <h1 className="text-lg font-bold">{column.heading}</h1>
               </div>
               {column.items.map((item, index) => (
-                <li className="flex list-none items-end gap-1 font-light hover:font-bold">
-                  <a href={item.link} className="block py-2">
+                <li className="flex list-none items-end gap-1 font-light">
+                  <a href={item.link} className="block py-2 hover:font-bold">
                     {item.name}
                   </a>
                 </li>

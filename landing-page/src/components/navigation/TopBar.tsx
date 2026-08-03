@@ -1,8 +1,8 @@
 import { useNavigationContext } from "./NavigationContext";
-import type { MenuItems } from "../data/navigationData";
+import type { TopBar } from "../data/navigationData";
 interface TopBarProps {
-  productMenu: MenuItems[];
-  utilityMenu: MenuItems[];
+  productMenu: TopBar[];
+  utilityMenu: TopBar[];
 }
 function TopBar({ productMenu, utilityMenu }: TopBarProps) {
   const { setActiveTabIndex, activeTabIndex, setActiveSubMenuIndex } =
@@ -16,7 +16,7 @@ function TopBar({ productMenu, utilityMenu }: TopBarProps) {
         {productMenu.map((item, index) => (
           <li
             key={item.name}
-            className={`bl-1 flex h-full list-none items-center border-r border-l border-gray-300 pr-8 pl-8 text-center font-extralight hover:font-bold ${activeTabIndex == index ? "border-t-2 border-orange-500 bg-white font-bold" : ""}`}
+            className={`bl-1 flex h-full list-none items-center border-r border-l border-gray-300 pr-8 pl-8 text-center  hover:font-bold ${activeTabIndex == index ? "border-t-2 border-orange-500 bg-white font-bold" : "font-extralight"}`}
             onClick={() => setActiveTabIndex(index)}
           >
             <a href={item.link}>{item.name}</a>
