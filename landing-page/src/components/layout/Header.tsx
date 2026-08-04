@@ -11,7 +11,8 @@ import { useState } from "react";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="flex h-full w-screen flex-col items-center justify-between bg-gray-200 pb-1.25">
+    <header className="flex h-full w-screen flex-col items-center justify-between pb-0.5 md:border-none md:bg-gray-200">
+      {/* Mobile menu button */}
       <div className="flex h-full w-screen items-center justify-between bg-white p-4 md:hidden">
         {/* logo */}
         <div className="flex h-full items-center gap-1">

@@ -11,7 +11,7 @@ function Menu({ menu, logo }: MenuProps) {
   const activeMenu = menu[activeTabIndex] ?? [];
   return (
     <>
-      <div className="flex h-full w-screen items-center gap-10 bg-white p-4">
+      <div className="hidden md:flex h-full w-screen items-center gap-10 bg-white p-4">
         <div className="flex h-full items-center gap-1">
           <img src={logo} alt="404" className="ml-5 box-content w-8" />
           <p className="text-4xl font-bold">

@@ -5,33 +5,34 @@ interface TopBarProps {
   utilityMenu: TopBar[];
 }
 function TopBar({ productMenu, utilityMenu }: TopBarProps) {
-  const { setActiveTabIndex, activeTabIndex, setActiveSubMenuIndex } =
-    useNavigationContext()
+  const { setActiveTabIndex, activeTabIndex, setActiveSubMenuIndex } = useNavigationContext();
   return (
     <div
-      className="flex h-9 w-full items-center text-sm"
+      className="flex h-full w-screen flex-col text-sm md:h-9 md:flex-row md:items-center md:justify-between md:gap-10"
       onMouseEnter={() => setActiveSubMenuIndex(-1)}
     >
-      <nav className="ml-52 flex h-full w-full items-center">
+      <nav className="flex h-full w-full flex-col gap-5 pt-5 pb-5 md:ml-52 md:flex-row md:items-center md:justify-start md:gap-0 md:pt-0 md:pb-0">
         {productMenu.map((item, index) => (
           <li
             key={item.name}
-            className={`bl-1 flex h-full list-none items-center border-r border-l border-gray-300 pr-8 pl-8 text-center  hover:font-bold ${activeTabIndex == index ? "border-t-2 border-orange-500 bg-white font-bold" : "font-extralight"}`}
+            className={`bl-1 flex h-full list-none items-center border-l border-gray-300 pr-8 pl-8 text-center hover:font-bold ${index == productMenu.length - 1 ? "border-r" : ""} ${activeTabIndex == index ? "md:border-t-2 md:border-orange-500 md:bg-white md:font-bold" : "font-extralight"}`}
             onClick={() => setActiveTabIndex(index)}
           >
             <a href={item.link}>{item.name}</a>
           </li>
         ))}
       </nav>
-      <nav className="flex h-full w-full items-center justify-end">
-        {utilityMenu.map((item) => (
+      <hr className="border-gray-300 md:hidden"></hr>
+      <nav className="flex h-full w-full flex-col pt-2 md:flex-row md:justify-end md:pt-0 md:items-center">
+        {utilityMenu.map((item, index) => (
           <li
             key={item.name}
-            className="list-none border-r border-l border-gray-300 p-2 pr-8 pl-8 hover:font-bold"
+            className={`list-none border-l border-gray-300 pt-2 pb-5 pr-8 pl-8 md:pt-0 md:pb-0 md:font-semibold font-extralight hover:font-bold ${index == utilityMenu.length - 1 ? "border-r" : ""} `}
           >
             <a href={item.link}>{item.name}</a>
           </li>
         ))}
+        <hr className="border-gray-300 md:hidden"></hr>
       </nav>
     </div>
   );
