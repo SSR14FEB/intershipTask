@@ -36,7 +36,7 @@ function Header() {
         {/* navigation */}
         <Navigation>
           <Navigation.topBar productMenu={productMenu} utilityMenu={utilityMenu} />
-          {/* <Navigation.menu menu={menu} logo={Logo} /> */}
+          <Navigation.menu menu={menu} logo={Logo} />
           <Navigation.subMenu subMenu={subMenuData} />
         </Navigation>
       </div>
