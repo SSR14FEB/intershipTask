@@ -52,8 +52,8 @@ function TopBar({ productMenu, utilityMenu }: TopBarProps) {
             </a>
           </li>
         ))}
-        <hr className="border-gray-300 md:hidden"></hr>
       </nav>
+      <hr className="border-gray-300 md:hidden"></hr>
     </div>
   );
 }
