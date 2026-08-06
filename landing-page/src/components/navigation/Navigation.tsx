@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import TopBar from "./TopBar";
 import Menu from "./Menu";
 import SubMenu from "./SubMenu";
@@ -11,18 +11,16 @@ interface NavigationProps {
 function Navigation({ children }: NavigationProps) {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [activeSubMenuIndex, setActiveSubMenuIndex] = useState(-1);
-  return (
-    <NavigationContext.Provider
-      value={{
-        activeTabIndex,
-        setActiveTabIndex,
-        activeSubMenuIndex,
-        setActiveSubMenuIndex,
-      }}
-    >
-      <header>{children}</header>
-    </NavigationContext.Provider>
+  const value = useMemo(
+    () => ({
+      activeTabIndex,
+      setActiveTabIndex,
+      activeSubMenuIndex,
+      setActiveSubMenuIndex,
+    }),
+    [activeTabIndex, activeSubMenuIndex]
   );
+  return <NavigationContext.Provider value={value}>{children}</NavigationContext.Provider>;
 }
 Navigation.topBar = TopBar;
 Navigation.menu = Menu;

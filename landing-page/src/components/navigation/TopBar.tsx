@@ -45,7 +45,7 @@ function TopBar({ productMenu, utilityMenu }: TopBarProps) {
             className={`flex h-full w-full list-none border-r border-gray-300 font-medium`}
           >
             <a
-              className="flex items-center whitespace-nowrap md:pr-4 md:pl-5 md:text-xs font-bold lg:pr-8 lg:pl-8"
+              className="flex items-center font-bold whitespace-nowrap md:pr-4 md:pl-5 md:text-xs lg:pr-8 lg:pl-8"
               href={item.link}
             >
               {item.name}
