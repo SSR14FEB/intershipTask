@@ -46,7 +46,7 @@ function Menu({ menu, logo }: MenuProps) {
           </p>
         </div>
         <div
-          className={`hidden h-full w-full items-center ${isOpen ? "md:flex md:flex-col md:items-start md:justify-start md:font-bold" : "lg:flex"} `}
+          className={`lg:ml-9 hidden h-full w-full items-center ${isOpen ? "md:flex md:flex-col md:items-start md:justify-start md:font-bold" : "lg:flex"} `}
         >
           <nav
             className={`mt-4 h-full items-center pl-8 text-sm md:flex md:w-full md:flex-col md:items-start md:gap-4 lg:flex lg:flex-row lg:gap-18`}
