@@ -11,7 +11,7 @@ import { useState } from "react";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="bg-red flex h-full w-screen flex-col items-center justify-between pb-0.5 md:border-none md:bg-gray-200">
+    <header className="bg-red flex h-full w-screen flex-col items-center justify-around pb-0.5 md:border-none md:bg-gray-200">
       {/* Mobile menu button */}
       <div className="flex h-full w-screen items-center justify-between bg-white p-4 md:hidden">
         {/* logo */}
@@ -32,7 +32,7 @@ function Header() {
           />
         </div>
       </div>
-      <div className={`${isOpen ? "block" : "hidden"} md:block md:w-full`}>
+      <div className={`${isOpen ? "block" : "hidden"} md:block w-full`}>
         {/* navigation */}
         <Navigation>
           <Navigation.topBar productMenu={productMenu} utilityMenu={utilityMenu} />
