@@ -1,5 +1,6 @@
 import Navigation from "../navigation/Navigation";
-import { productMenu, utilityMenu, menu, subMenuData } from "../data/navigationData";
+import { productMenu, utilityMenu, menu,} from "../data/navigationData";
+import subMenuData from "../data/navigationData";
 import { Logo } from "../common/Logo";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";

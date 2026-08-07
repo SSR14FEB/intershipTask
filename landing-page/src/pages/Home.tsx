@@ -2,8 +2,7 @@ import React from 'react'
 
 function Home() {
   return (
-    <div className=''>
-       
+    <div className='w-screen h-screen'>
     </div>
   )
 }

@@ -647,5 +647,6 @@ const shop = [
     ],
   },
 ];
+const subMenuData: SubMenuInterface[][] = [electricalSystem, vanConversion, shop];
 
-export const subMenuData: SubMenuInterface[][] = [electricalSystem, vanConversion, shop];
+export default subMenuData

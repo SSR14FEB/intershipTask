@@ -14,6 +14,7 @@ function Menu({ menu, logo }: MenuProps) {
   const { setActiveSubMenuIndex, activeTabIndex, activeSubMenuIndex } = useNavigationContext();
   const activeMenu = menu[activeTabIndex] ?? [];
   const [isOpen, setIsOpen] = useState(false);
+  console.log(activeSubMenuIndex);
   return (
     <>
       <div className="h-full w-full items-center gap-10 bg-white p-4 md:flex md:flex-col md:gap-0 lg:flex lg:flex-row">
@@ -46,7 +47,7 @@ function Menu({ menu, logo }: MenuProps) {
           </p>
         </div>
         <div
-          className={`lg:ml-9 hidden h-full w-full items-center ${isOpen ? "md:flex md:flex-col md:items-start md:justify-start md:font-bold" : "lg:flex"} `}
+          className={`hidden h-full w-full items-center lg:ml-9 ${isOpen ? "md:flex md:flex-col md:items-start md:justify-start md:font-bold" : "lg:flex"} `}
         >
           <nav
             className={`mt-4 h-full items-center pl-8 text-sm md:flex md:w-full md:flex-col md:items-start md:gap-4 lg:flex lg:flex-row lg:gap-18`}
@@ -54,10 +55,18 @@ function Menu({ menu, logo }: MenuProps) {
             {activeMenu.map((item: MenuItems, index: number) => (
               <li
                 key={index}
-                className={`flex list-none items-end gap-1 hover:font-bold md:font-medium lg:font-light ${activeSubMenuIndex == index ? "font-bold" : "font-light"}`}
-                onMouseEnter={() => setActiveSubMenuIndex(index)}
+                className={`flex list-none items-end gap-1 ${activeSubMenuIndex == index ? "font-bold" : "font-light"}`}
               >
-                <a href={item.link}>
+                <a
+                  key={index}
+                  href={item.link}
+                  onMouseEnter={() => setActiveSubMenuIndex(index)}
+                  onClick={() =>
+                    activeSubMenuIndex === index
+                      ? setActiveSubMenuIndex(-1)
+                      : setActiveSubMenuIndex(index)
+                  }
+                >
                   {item.name}
                   {item.pro ? (
                     <span className="ml-2 rounded-4xl bg-gray-300 text-center text-sm text-orange-400 md:pt-px md:pr-1 md:pb-px md:pl-1 md:text-xs lg:pt-1 lg:pr-2 lg:pb-1 lg:pl-2">
