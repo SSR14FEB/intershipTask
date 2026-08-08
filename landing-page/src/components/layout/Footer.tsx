@@ -25,7 +25,7 @@ function Footer() {
             <h4 className="text-md mb-2 font-bold">{columns.heading}</h4>
             <ul>
               {columns.items.map((item) => (
-                <li className="mr-4 mb-2 text-sm font-light text-gray-400 md:mr-0" key={index}>
+                <li className="mr-4 mb-2 text-sm font-light text-gray-600 md:mr-0" key={index}>
                   {item}
                 </li>
               ))}
