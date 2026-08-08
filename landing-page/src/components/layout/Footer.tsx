@@ -4,7 +4,7 @@ import { FaInstagram, FaFacebookF, FaPinterestP } from "react-icons/fa";
 import Ratings from "../common/Ratings";
 function Footer() {
   return (
-    <footer className="flex w-screen flex-col items-center bg-gray-100 lg:h-130">
+    <footer className="flex w-screen  flex-col items-center bg-gray-100 lg:h-130">
       <div className="flex h-24 w-[75%] items-center justify-between pb-10 pt-10">
         {/* logo */}
         <div className="flex h-full items-center gap-1">
@@ -19,13 +19,13 @@ function Footer() {
           <FaPinterestP className="cursor-pointer text-gray-400" size={30} />
         </div>
       </div>
-      <div className="flex h-full w-full justify-center md:gap-20">
+      <div className="flex flex-wrap h-full justify-center md:gap-20">
         {footerData.map((columns, index) => (
           <div key={columns.heading} className="">
             <h4 className="text-md mb-4 font-bold">{columns.heading}</h4>
             <ul>
               {columns.items.map((item) => (
-                <li className="mb-2 text-sm font-light" key={index}>
+                <li className="mb-2 mr-4 md:mr-0 text-sm font-light" key={index}>
                   {item}
                 </li>
               ))}
@@ -33,7 +33,7 @@ function Footer() {
           </div>
         ))}
       </div>
-      <div className="flex h-42 w-[60%] items-start justify-around">
+      <div className="flex h-42 w-[60%] items-start flex-wrap justify-around">
         <div className="flex flex-col">
           <Ratings rating={4.5} />
           <p className="text-xs font-light">4.8/5 (1419 reviews)</p>
