@@ -14,7 +14,7 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 flex h-full w-screen flex-col items-center justify-around pb-0.5 md:border-none md:bg-gray-200">
       {/* Mobile menu button */}
-      <div className="flex h-full w-screen items-center justify-between bg-white p-4 md:hidden">
+      <div className="sticky top-0 z-50 flex h-full w-screen items-center justify-between bg-white p-4 md:hidden">
         {/* logo */}
         <div className="flex h-full items-center gap-1">
           <img src={Logo} alt="404" className="box-content w-8" />
