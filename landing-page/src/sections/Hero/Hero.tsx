@@ -12,7 +12,7 @@ function Hero() {
           muted
         />
         <video
-          className="h-full w-full object-cover md:hidden"
+          className="object-cover h-full w-full md:hidden"
           src="https://res.cloudinary.com/dglbwcbch/video/upload/f_auto,q_auto/v1738835630/assets/COMPRESSED-Web-homepage_1080x1920.mp4"
           autoPlay
           loop
