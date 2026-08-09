@@ -14,7 +14,6 @@ function Menu({ menu, logo }: MenuProps) {
   const { setActiveSubMenuIndex, activeTabIndex, activeSubMenuIndex } = useNavigationContext();
   const activeMenu = menu[activeTabIndex] ?? [];
   const [isOpen, setIsOpen] = useState(false);
-  console.log(activeSubMenuIndex);
   return (
     <>
       <div className="h-full w-full items-center gap-10 bg-white p-4 md:flex md:flex-col md:gap-0 lg:flex lg:flex-row">

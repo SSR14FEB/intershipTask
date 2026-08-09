@@ -2,7 +2,7 @@ import React from "react";
 
 function Hero() {
   return (
-    <div className="relative h-full w-full">
+    <div className="relative h-full w-full -z-10">
       <div className="h-full w-full bg-white">
         <video
           className="hidden h-full w-full object-cover md:block"
