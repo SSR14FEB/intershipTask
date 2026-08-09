@@ -1,5 +1,5 @@
 import Navigation from "../navigation/Navigation";
-import { productMenu, utilityMenu, menu,} from "../data/navigationData";
+import { productMenu, utilityMenu, menu } from "../data/navigationData";
 import subMenuData from "../data/navigationData";
 import { Logo } from "../common/Logo";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -12,7 +12,7 @@ import { useState } from "react";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="flex h-full w-screen flex-col items-center justify-around pb-0.5 md:border-none md:bg-gray-200">
+    <header className="sticky top-0 z-10 flex h-full w-screen flex-col items-center justify-around pb-0.5 md:border-none md:bg-gray-200">
       {/* Mobile menu button */}
       <div className="flex h-full w-screen items-center justify-between bg-white p-4 md:hidden">
         {/* logo */}
@@ -33,7 +33,7 @@ function Header() {
           />
         </div>
       </div>
-      <div className={`${isOpen ? "block" : "hidden"} md:block w-full`}>
+      <div className={`${isOpen ? "block" : "hidden"} w-full md:block `}>
         {/* navigation */}
         <Navigation>
           <Navigation.topBar productMenu={productMenu} utilityMenu={utilityMenu} />

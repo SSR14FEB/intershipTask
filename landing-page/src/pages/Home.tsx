@@ -1,10 +1,10 @@
-import React from 'react'
-
+import Hero from "../sections/Hero/Hero";
 function Home() {
   return (
-    <div className='w-screen h-screen'>
+    <div className="h-screen w-screen">
+      <Hero />
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
