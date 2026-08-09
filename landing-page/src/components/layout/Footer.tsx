@@ -4,7 +4,7 @@ import { FaInstagram, FaFacebookF, FaPinterestP } from "react-icons/fa";
 import Ratings from "../common/Ratings";
 function Footer() {
   return (
-    <footer className="flex w-screen flex-col items-center bg-gray-100 lg:h-130">
+    <footer className="flex w-full flex-col items-center bg-gray-100 lg:h-130">
       <div className="flex h-24 w-full items-center justify-around md:w-[75%] md:justify-between md:pt-10 md:pb-10">
         {/* logo */}
         <div className="flex h-full items-center gap-1">

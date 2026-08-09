@@ -8,10 +8,10 @@ function TopBar({ productMenu, utilityMenu }: TopBarProps) {
   const { setActiveTabIndex, activeTabIndex, setActiveSubMenuIndex } = useNavigationContext();
   return (
     <div
-      className="flex bg-white h-full w-full flex-col text-sm md:h-9 md:flex-row md:items-center md:justify-center lg:w-full lg:items-center lg:gap-10"
+      className="full flex h-full flex-col bg-white text-sm md:h-9 md:flex-row md:items-center md:justify-center md:bg-transparent lg:w-full lg:items-center lg:gap-10"
       onMouseEnter={() => setActiveSubMenuIndex(-1)}
     >
-      <nav className="flex  h-full w-full flex-col gap-5 pt-4 pb-4 pl-6 md:flex-row md:items-center md:justify-center md:gap-0 md:pt-0 md:pb-0 md:pl-8 lg:pl-55">
+      <nav className="flex h-full w-full flex-col gap-5 pt-4 pb-4 pl-6 md:flex-row md:items-center md:justify-center md:gap-0 md:pt-0 md:pb-0 md:pl-8 lg:pl-55">
         {activeTabIndex == 0 ? "" : <span className="hidden text-gray-300 md:block">|</span>}
 
         {productMenu.map((item, index) => (

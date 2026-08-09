@@ -1,7 +1,8 @@
 import Hero from "../sections/Hero/Hero";
+
 function Home() {
   return (
-    <div className="relative h-screen w-screen">
+    <div className="min-h-screen w-full  bg-white">
       <Hero />
     </div>
   );

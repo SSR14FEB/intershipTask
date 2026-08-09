@@ -12,9 +12,9 @@ import { useState } from "react";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="relative top-0 z-50 flex h-full w-screen flex-col items-center justify-around pb-0.5 md:sticky md:border-none md:bg-gray-200">
+    <header className="sticky top-0 z-50 flex h-full w-full flex-col items-center justify-around md:sticky md:border-none md:bg-gray-200 md:pb-0.5">
       {/* Mobile menu button */}
-      <div className="flex h-full w-screen items-center justify-between bg-white p-4 md:hidden">
+      <div className="flex h-full w-full items-center justify-between bg-white p-4 md:hidden">
         {/* logo */}
         <div className="flex h-full items-center gap-1">
           <img src={Logo} alt="404" className="box-content w-8" />
@@ -33,7 +33,7 @@ function Header() {
           />
         </div>
       </div>
-      <div className={`${isOpen ? "absolute top-full z-50" : "hidden"} w-full md:block`}>
+      <div className={`${isOpen ? "absolute top-full z-50 bg-white" : "hidden"} w-full md:static md:block`}>
         {/* navigation */}
         <Navigation>
           <Navigation.topBar productMenu={productMenu} utilityMenu={utilityMenu} />
