@@ -17,7 +17,7 @@ function SubMenu({ subMenu }: SubMenuProps) {
 
   return (
     <div
-      className="h-68 w-full items-center gap-10 bg-white md:flex"
+      className="absolute h-68 w-full items-center gap-10 bg-white md:flex"
       onMouseLeave={() => setActiveSubMenuIndex(-1)}
     >
       <div className="flex h-68 w-full items-center">

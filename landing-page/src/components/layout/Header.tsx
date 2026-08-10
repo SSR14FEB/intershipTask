@@ -33,7 +33,7 @@ function Header() {
           />
         </div>
       </div>
-      <div className={`${isOpen ? "absolute top-full z-50 bg-white" : "hidden"} w-full md:static md:block`}>
+      <div className={`${isOpen ? "absolute top-full z-50 bg-white" : "hidden"} w-full md:block`}>
         {/* navigation */}
         <Navigation>
           <Navigation.topBar productMenu={productMenu} utilityMenu={utilityMenu} />
