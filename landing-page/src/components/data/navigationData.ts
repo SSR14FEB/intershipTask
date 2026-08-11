@@ -12,9 +12,9 @@ export const productMenu: TopBar[] = [
 ];
 
 export const utilityMenu: TopBar[] = [
-  { name: "ABOUT US", link: "#" },
-  { name: "Shop", link: "#" },
-  { name: "Testimonial", link: "#" },
+  { name: "ABOUT US", link: "#about" },
+  { name: "Shop", link: "#shop" },
+  { name: "Testimonial", link: "#testimonials" },
   { name: "🇮🇳", link: "#" },
   { name: "₹", link: "#" },
 ];
